@@ -1,6 +1,7 @@
 
 import pandas as pd
 import numpy as np
+import sys
 
 def alocacao_ativos(df, capital, seed = 0, melhores_pesos = []):
   df = df.copy()
@@ -22,18 +23,18 @@ def alocacao_ativos(df, capital, seed = 0, melhores_pesos = []):
   for i, k in enumerate(df.columns[1:]):
     df[k] = df[k] * pesos[i] * capital
 
-  df['soma valor'] = df.iloc[:, 1:].sum(axis = 1)
+  df['Capital'] = df.iloc[:, 1:].sum(axis = 1)
 
   datas = df['Date']
 
   df.drop(labels = ['Date'], axis = 1, inplace = True)
-  df['taxa retorno'] = 0.0
+  df['tx retorno'] = 0.0
 
   for i in range(1, len(df)):
-    df['taxa retorno'][i] = ((df['soma valor'][i] / df['soma valor'][i - 1]) - 1) * 100
+    df['tx retorno'][i] = ((df['Capital'][i] / df['Capital'][i - 1]) - 1) * 100
 
   acoes_pesos = pd.DataFrame(data = {'Ações': colunas, 'Pesos': pesos * 100})
-  return df, datas, acoes_pesos, df.loc[len(df) - 1]['soma valor']
+  return df, datas, acoes_pesos, df.loc[len(df) - 1]['Capital']
 
 
 def visualiza_carteira(resultado):
@@ -71,13 +72,13 @@ def alocacao_markowitz(df, capital, i, n):
     retorno_carteira = np.log(df / df.shift(1))
     matriz_cov = retorno_carteira.cov()
 
-    df['soma valor'] = df.sum(axis = 1)
-    df['taxa retorno'] = 0.0
+    df['Capital'] = df.sum(axis = 1)
+    df['tx retorno'] = 0.0
 
     for w in range(1, len(df)):
-      df['taxa retorno'][w] = np.log(df['soma valor'][w] / df['soma valor'][w - 1])
+      df['tx retorno'][w] = np.log(df['Capital'][w] / df['Capital'][w - 1])
 
-    retorno_esperado = np.sum(df['taxa retorno'].mean() * pesos) * 246
+    retorno_esperado = np.sum(df['tx retorno'].mean() * pesos) * 246
     vol_esperada = np.sqrt(np.dot(pesos, np.dot(matriz_cov * 246, pesos)))
     sharpe_ratio = (retorno_esperado - i) / vol_esperada
 
