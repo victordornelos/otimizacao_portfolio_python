@@ -25,7 +25,7 @@ Todavia, é importante lembrar que ações são investimentos de risco, altament
 Com os avanços tecnológicos atuais, as linguagens de programação e algoritmos se tornaram ferramentas essenciais para auxiliar na tomada de decisões no mercado financeiro. Utilizando métodos como Markowitz, Hill Climb e Simulated Annealing, é possível otimizar portfólios de forma eficiente e eficaz.
 
 ## 2. Objetivo
-O objetivo deste repositório é explorar o uso dos métodos de Markowitz, Hill Climb e Simulated Annealing por meio de uma carteira de ações fictícias. Assim, verifico e comparo os resultados obtidos por cada método, criando conclusões sobre sua eficiência e hipóteses sobre os fatores que podem ter influenciado seus resultados em cada caso.
+O objetivo deste repositório é explorar o uso dos métodos de Markowitz, Hill Climb e Simulated Annealing por meio de uma carteira de ações fictícias. Assim, verificamos e comparamos os resultados obtidos por cada método, criando conclusões sobre sua eficiência e hipóteses sobre os fatores que podem ter influenciado seus resultados em cada caso.
 
 ## 3. Metodologia
 Neste repositório, foram utilizados Python e Jupyter Notebook. Dois arquivos de código foram criados: um principal, contendo a exploração das ações e dos métodos, e um auxiliar, com algumas funções separadas por questões de organização.
