@@ -12,7 +12,7 @@
 1. [Descrição](https://github.com/victordornelos/otimizacao_portfolio_python/tree/main?tab=readme-ov-file#1-descrição)
 2. [Objetivo](https://github.com/victordornelos/otimizacao_portfolio_python/tree/main?tab=readme-ov-file#2-objetivo)
 3. [Metodologia](https://github.com/victordornelos/otimizacao_portfolio_python/tree/main?tab=readme-ov-file#3-metodologia)
-4. [Resultados](https://github.com/victordornelos/otimizacao_portfolio_python/tree/main?tab=readme-ov-file#4-resultado)
+4. [Resultados](https://github.com/victordornelos/otimizacao_portfolio_python/tree/main?tab=readme-ov-file#4-resultados)
 5. [Referências](https://github.com/victordornelos/otimizacao_portfolio_python/tree/main?tab=readme-ov-file#5-referências)
 
 ## 1. Descrição
@@ -42,7 +42,7 @@ Abaixo, segue uma descrição do funcionamento de cada um dos métodos:
 
 •  **Simulated Annealing**: O algoritmo Simulated Annealing (ou recozimento simulado) funciona de forma semelhante ao Hill Climb, partindo de um ponto inicial aleatório e buscando soluções vizinhas com melhores resultados. A diferença é que este modelo não descarta vizinhos com valores menores, considerando essa probabilidade, o que o torna mais eficiente em encontrar soluções globais do que o Hill Climb. Neste contexto, assim como no Hill Climb, foi utilizada a biblioteca mlrose e realizados diversos testes com diferentes pontos iniciais, visando obter a composição da carteira que proporcionasse o melhor índice de Sharpe. Os dados resultantes também estão disponíveis nos formatos CSV e Pickle.
 
-## 4. Resultado
+## 4. Resultados
 Após realizar diversos testes com os três métodos, foi possível chegar a algumas conclusões. A primeira é que tanto o Hill Climb quanto o Simulated Annealing, apesar das mudanças nas ações do portfólio, dos pontos iniciais e da adição de loops para gerar vários pontos de partida aleatórios (o que não foi muito eficaz), ainda concentravam a maior parte do capital em uma única ação com o melhor Sharpe Ratio ou, em alguns casos, em apenas duas ações. Ou seja, os algoritmos tiveram grande dificuldade em escapar das soluções locais para encontrar a solução global.
 
 Outro desafio foi o esforço computacional. Devido à natureza randômica desses métodos, foi necessário realizar diversos testes, resultando em um longo tempo de execução do código. Isso foi particularmente evidente ao tentar inserir loops no Hill Climb e no Simulated Annealing.
