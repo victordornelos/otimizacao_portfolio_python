@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Wall street](https://revistaazul.voeazul.com.br/wp-content/uploads/2023/03/os-centros-financeiros-mais-poderosos-de-todo-o-mundo-1536x1031.jpeg.webp)
 
- **Autor:** Victor Flávio P. Dornelos\
+ **Autores:** Victor Flávio P. Dornelos\
 **E-mail:** victor.dornelos@hotmail.com\
 **Linkedin**: [Victor Flávio Pereira Dornelos](https://www.linkedin.com/in/victor-flavio-pereira-dornelos/)
 
